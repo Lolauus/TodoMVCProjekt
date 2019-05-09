@@ -4,12 +4,14 @@ body
     background: #f5f5f5;
     margin: 1%;
 }
+@media only screen and (max-width: 736px) {
 
 .header{
     font-size: 50%;
     color: rgba(175, 47, 47, 0.15);
     text-align: center;
     font-size: 100px;
+    margin: 150px;
 }
 h1{
 
@@ -17,19 +19,16 @@ h1{
     top: -155px;
     right: 40px;
 }
-input{
+input{  
 
-    position: absolute;
-    top: 120px;
-    left: 125px;
+    position: relative;
+    top: -70px;
+    left: -100px;
+    font-size: x-large;
 }
-.text{
+div{
 
-    position: absolute;
-    top: 150px;
-    right: 30px;
+    text-align: center;
+    margin: 65px auto 0;
 }
-.names{
-
-
 }
