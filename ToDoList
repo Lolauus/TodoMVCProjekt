@@ -18,3 +18,5 @@ Data som sparas mellan körningar med hjälp av localStorage.
 Redigering av föremål genom dubbelklick.
 Den visuella "pappershög"-effekten under listan med föremål.
 De faktiska ikonerna som används på TodoMVC-hemsidan (istället för substituten som länkas till under kraven för godkänt).
+
+https://stackoverflow.com/questions/6272384/most-popular-screen-sizes-resolutions-on-android-phones?fbclid=IwAR2NJC3jtzr-yXDjvkitxqWBSS1P53l1SoJDSEQMKf2TNOTZBKLplOH7q8Y
