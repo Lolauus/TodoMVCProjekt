@@ -15,10 +15,11 @@
             event.preventDefault();
         
             const toDoInput = document.getElementById("Insertinfo");
-            const newToDo = document.createElement("Li");
+            const newToDo = document.createElement("ul");
             newToDo.textContent = toDoInput.value;
             document.body.appendChild(newToDo);
             document.getElementById('Insertinfo').value = '';
         }
 
 }
+    
