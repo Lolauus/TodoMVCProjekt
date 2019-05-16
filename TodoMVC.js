@@ -15,9 +15,19 @@
             event.preventDefault();
         
             const toDoInput = document.getElementById("Insertinfo");
-            const newToDo = document.createElement("ul");
-            newToDo.textContent = toDoInput.value;
-            document.body.appendChild(newToDo);
+            const getUl = document.querySelector("#ullist");
+            const newLi = document.createElement("li");
+            const newInput = document.createElement("input");
+            const newLabel = document.createElement("label");
+            const newButton = document.createElement("button");
+
+            console.log("#ulList");
+            console.log(getUl);
+            getUl.appendChild(newLi);
+            newLi.appendChild(newInput, newLabel, newButton);
+
+            getUl.textContent = toDoInput.value;
+            //document.body.appendChild(newToDo);
             document.getElementById('Insertinfo').value = '';
         }
 
