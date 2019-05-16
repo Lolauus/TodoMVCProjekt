@@ -16,16 +16,9 @@
         
             const toDoInput = document.getElementById("Insertinfo");
             const newToDo = document.createElement("ul");
-            const newList = document.createElement("li");
-            newToDo.appendChild(newList);
             newToDo.textContent = toDoInput.value;
             document.body.appendChild(newToDo);
             document.getElementById('Insertinfo').value = '';
-        }
-        if(document.getElementById("Insertinfo" === "")){
-
-            alert("You must write something, bitch ")
-
         }
 
 }
