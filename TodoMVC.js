@@ -23,7 +23,6 @@
             let newButton = document.createElement("button");
             newInput.value = toDoInput.value;
 
-            
             newLi.appendChild(newInput);
             newLi.appendChild(newLabel);
             newLi.appendChild(newButton);
