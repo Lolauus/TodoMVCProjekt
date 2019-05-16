@@ -11,6 +11,7 @@ ul li{
   box-sizing: border-box;
   padding: 12px 8px 12px 40px;
   background: black;
+  list-style: none;
 }
 
 /*360x640

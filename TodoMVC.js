@@ -19,21 +19,19 @@
             let getUl = document.querySelector("#ullist");
             let newLi = document.createElement("li");
             let newInput = document.createElement("input");
+            newInput.setAttribute("type", "checkbox");
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
-            newInput.value = toDoInput.value;
-
+            newLabel.textContent = toDoInput.value;
             newLi.appendChild(newInput);
             newLi.appendChild(newLabel);
             newLi.appendChild(newButton);
-
             getUl.appendChild(newLi);
 
-            getUl.createElement(newLi);
 
-            getUl.textContent = toDoInput.value;
-            //document.body.appendChild(newToDo);
+            document.createElement("newLi");
             document.getElementById('Insertinfo').value = '';
+            //document.body.appendChild(newToDo);
         }
 
 }
