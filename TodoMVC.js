@@ -5,6 +5,7 @@
     //      txtNode = document.createTextNode(txtVal);
     //      liNode.appendChild(txtNode);
     //      listNode.appendChild(liNode);
+    //list.innerHTML += "<li>" + input.value + <"li">
     
     // }
     addTodo();
@@ -14,10 +15,28 @@
         form.onsubmit = event => {
             event.preventDefault();
         
-            const toDoInput = document.getElementById("Insertinfo");
-            const newToDo = document.createElement("ul");
-            newToDo.textContent = toDoInput.value;
-            document.body.appendChild(newToDo);
+            let toDoInput = document.getElementById("Insertinfo");
+            let getUl = document.querySelector("#ullist");
+            let newLi = document.createElement("li");
+            let newInput = document.createElement("input");
+            let newLabel = document.createElement("label");
+            let newButton = document.createElement("button");
+            newInput.value = toDoInput.value;
+
+            newLi.appendChild(newInput);
+            newLi.appendChild(newLabel);
+            newLi.appendChild(newButton);
+
+            getUl.appendChild(newLi);
+
+            getUl.createElement(newLi);
+
+
+
+            
+
+            getUl.textContent = toDoInput.value;
+            //document.body.appendChild(newToDo);
             document.getElementById('Insertinfo').value = '';
         }
 
