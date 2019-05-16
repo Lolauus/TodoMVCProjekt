@@ -31,10 +31,6 @@
 
             getUl.createElement(newLi);
 
-
-
-            
-
             getUl.textContent = toDoInput.value;
             //document.body.appendChild(newToDo);
             document.getElementById('Insertinfo').value = '';
