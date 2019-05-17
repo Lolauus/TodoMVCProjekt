@@ -38,21 +38,26 @@
 
             }
             
-           newLabel.textContent = toDoInput.value;
-
-            newLi.appendChild(newInput);
-            newLi.appendChild(newLabel);
-            newLi.appendChild(newButton);
-            getUl.appendChild(newLi);
-
-
-            document.createElement("newLi");
-            document.getElementById('Insertinfo').value = '';
-
-            if (getUl.textContent != "")
+            newLabel.textContent = toDoInput.value;
+            if (newLabel.textContent != "")
             {
-                let footer = document.getElementById("footer");
-                footer.style.display = "block";
+                newLi.appendChild(newInput);
+                newLi.appendChild(newLabel);
+                newLi.appendChild(newButton);
+                getUl.appendChild(newLi);
+
+
+                document.createElement("newLi");
+                document.getElementById('Insertinfo').value = '';
+                
+              let footer = document.getElementById("footer");
+               footer.style.display = "block";
+
+               
+            }
+            else{
+                alert("hello");
+                return false;
             }
             //document.body.appendChild(newToDo);
         }

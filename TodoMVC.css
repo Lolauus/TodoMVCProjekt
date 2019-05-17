@@ -31,6 +31,14 @@ ul li{
 footer{
   display: none;
 }
+#ullist{
+
+  position: relative;
+  margin-left: 27%;
+  margin-right: 30%;
+  margin-top: 5px;
+
+}
 /*360x640
 1366x768
 1920x1080
