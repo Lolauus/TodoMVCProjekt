@@ -13,7 +13,7 @@ ul li{
   background: white;
   list-style: none;
 }
-button{
+#RemoveButton{
   position: absolute;
   right: 67px;
   color: #cc9a9a;
@@ -28,7 +28,9 @@ button{
   width: 23px;
   margin-top: -1px;
 }
-
+footer{
+  display: none;
+}
 /*360x640
 1366x768
 1920x1080

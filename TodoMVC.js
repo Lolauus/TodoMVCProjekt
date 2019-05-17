@@ -30,9 +30,15 @@
 
                 newLi.remove("selected");
 
-            }
+                if(getUl.textContent == "")
+                {
+                    let footer = document.getElementById("footer");
+                    footer.style.display = "none";
+                }
 
-            newLabel.textContent = toDoInput.value;
+            }
+            
+           newLabel.textContent = toDoInput.value;
 
             newLi.appendChild(newInput);
             newLi.appendChild(newLabel);
@@ -42,8 +48,13 @@
 
             document.createElement("newLi");
             document.getElementById('Insertinfo').value = '';
+
+            if (getUl.textContent != "")
+            {
+                let footer = document.getElementById("footer");
+                footer.style.display = "block";
+            }
             //document.body.appendChild(newToDo);
         }
 
 }
-    
