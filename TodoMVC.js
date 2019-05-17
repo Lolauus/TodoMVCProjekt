@@ -25,40 +25,45 @@
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
             newButton.setAttribute("id", "RemoveButton");
+            let span = document.getElementById("span");
+
 
             newButton.onclick = () => {
 
                 newLi.remove("selected");
+                span.textContent = getUl.childElementCount + " " + "items left";
 
                 if(getUl.textContent == "")
                 {
                     let footer = document.getElementById("footer");
                     footer.style.display = "none";
+                   
                 }
 
             }
-            
             newLabel.textContent = toDoInput.value;
             if (newLabel.textContent != "")
             {
+                let footer = document.getElementById("footer");
+                footer.style.display = "block";
+
+
                 newLi.appendChild(newInput);
                 newLi.appendChild(newLabel);
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
-
-
+                span.textContent = getUl.childElementCount + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
                 
-              let footer = document.getElementById("footer");
-               footer.style.display = "block";
-
-               
+                
             }
+            
             else{
-                alert("hello");
                 return false;
             }
+
+
             //document.body.appendChild(newToDo);
         }
 
