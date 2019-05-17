@@ -26,10 +26,14 @@
             let newButton = document.createElement("button");
             newButton.setAttribute("id", "RemoveButton");
 
+            newButton.onclick = () => {
 
+                newLi.remove("selected");
+
+            }
 
             newLabel.textContent = toDoInput.value;
-            
+
             newLi.appendChild(newInput);
             newLi.appendChild(newLabel);
             newLi.appendChild(newButton);
