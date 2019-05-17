@@ -16,13 +16,20 @@
             event.preventDefault();
         
             let toDoInput = document.getElementById("Insertinfo");
+            
             let getUl = document.querySelector("#ullist");
             let newLi = document.createElement("li");
             let newInput = document.createElement("input");
             newInput.setAttribute("type", "checkbox");
+            newInput.setAttribute("id","todolist");
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
+            newButton.setAttribute("id", "RemoveButton");
+
+
+
             newLabel.textContent = toDoInput.value;
+            
             newLi.appendChild(newInput);
             newLi.appendChild(newLabel);
             newLi.appendChild(newButton);
