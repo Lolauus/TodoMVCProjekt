@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="TodoMVC.css">
-    
-<script src="TodoMVC.js" defer></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="TodoMVC.css" />
+
+    <script src="TodoMVC.js" defer></script>
 
     <title>todoMVC</title>
-</head>
-<body>
+  </head>
+  <body>
     <section class="header">
+      <h1>todos</h1>
+      <form>
+        <input placeholder="What needs to be done?" id="Insertinfo" />
+      </form>
+      <ul id="ullist"></ul>
 
-        <h1 >todos</h1>
-        <form>
-            <input placeholder="What needs to be done?"  id="Insertinfo">    
-        </form>
-        <ul id="ullist"></ul>
+      <footer id="footer">
+        <ul class="options">
+          <span id="span">items left </span>
+          <li><a class="All" href="#/">All</a></li>
+          <li><a class="Active" href="#/active">Active</a></li>
+          <li><a class="Completed" href="#/Completed">Completed</a></li>
+          <li><a class="Clear" href="#/clear">Clear Completed</a></li>
+        </ul>
+      </footer>
 
-        <footer id="footer">
-                <ul class="options">
-                   <span id="span">items left </span>
-                   <li><a class="All" href="#/">All</a></li>
-                   <li><a class="Active" href="#/active">Active</a></li>
-                   <li><a class="Completed" href="#/Completed">Completed</a></li>
-                   <p id="Clear">Clear Completed</p>
-                </ul>
-        </footer>
-
-        <div id="text">
-        <p>Double click to edit a todo</p> 
-        <p>Written by: <br> Alexander Glandberger <br>and<br> Viktor Persson</p>
-        <p>Part of TodoMVC </p> 
-        </div>
+      <div id="text">
+        <p>Double click to edit a todo</p>
+        <p>
+          Written by: <br />
+          Alexander Glandberger <br />and<br />
+          Viktor Persson
+        </p>
+        <p>Part of TodoMVC</p>
+      </div>
     </section>
-
-</body>
+  </body>
 </html>
