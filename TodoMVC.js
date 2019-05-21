@@ -12,13 +12,30 @@
             newLi.setAttribute("class","");
             let getUl = document.querySelector("#ullist");
             let newInput = document.createElement("input");
-            newInput.setAttribute("type", "checkbox");
+            newInput.setAttribute("type","checkbox");
             newInput.classList.add("checkbox");
             newInput.onchange = checkboxfunction;
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
-            newButton.setAttribute("id", "RemoveButton");
+            newButton.setAttribute("id","RemoveButton");
             let span = document.getElementById("span");
+            let imagedd = document.getElementById("labelchecked");
+
+             let imagelabel = document.createElement("label");
+             imagelabel.setAttribute("id","imagechecked");
+             let imagecheck = document.createElement('img');
+              imagecheck.setAttribute("id","checkedimage");
+              imagecheck.setAttribute("src", 'checked.jpg');
+             let imageuncheck = document.createElement("img");
+             imagecheck.setAttribute("src", 'unchecked.jpg');
+
+             document.getElementById("labelchecked").onclick = function(){
+
+                 var checkbox = document.getElementById('labelchecked');
+                 checkbox.checked = !checkbox.checked;
+
+             }
+
 
             newButton.onclick = () => {
 
@@ -41,6 +58,8 @@
                 newLi.appendChild(newLabel);
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
+                newLi.appendChild(imagelabel);
+                imagelabel.appendChild(imagedd);
                 span.textContent = getUl.childElementCount + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
@@ -48,10 +67,7 @@
          
             else{
                 return false;
-            }
-
-        }
-            
+            }           
     }   
         if(getUlist.childElementCount != 0){
         checkboxfunction();
@@ -65,13 +81,12 @@
         }
         // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
         // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
-
 }
         function showCompleted(){
             let getCompleted = document.querySelectorAll(".Completed");
             
         }
-
+    }
      
 
      
