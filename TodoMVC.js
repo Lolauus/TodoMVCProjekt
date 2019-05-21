@@ -57,20 +57,21 @@
         checkboxfunction();
     }
       function checkboxfunction(){
-        let getCheckbox  = document.getElementById("checkbox");
-        if(getCheckbox.checked == true){
-
-          document.querySelector("#li").className = "Completed";
-          let hrefpung =  document.querySelector(".Completed").href = "#/Completed";
+        let getCheckbox = Array.from(document.querySelectorAll("#checkbox"));
+        for (const box of getCheckbox) {
+            if (box.checked)
+            {
+                document.querySelector("#li").className = "Completed";
+            }
+            else{
+                document.querySelector("#li").className = "";
+            }
+        }
+          //let hrefpung =  document.querySelector(".Completed").href = "#/Completed";
 
         }
-        else{
 
-            document.querySelector("#li").className = "";
-        }  
-
-
-     }
+     
 
      
 
