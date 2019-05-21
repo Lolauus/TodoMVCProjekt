@@ -21,7 +21,7 @@ padding: 9px 8px 12px 0px;
   height: 22px;
   width: 23px;
 }
-#checkbox {
+.checkbox {
   position: absolute;
   left: 7px;
   height: 22px;

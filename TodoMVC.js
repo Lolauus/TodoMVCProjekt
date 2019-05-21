@@ -8,13 +8,13 @@
             
             let toDoInput = document.getElementById("Insertinfo"); 
             let newLi = document.createElement("li");
-            newLi.setAttribute("id", "li");
+            //newLi.setAttribute("id", "li");
             newLi.setAttribute("class","");
             let getUl = document.querySelector("#ullist");
             let newInput = document.createElement("input");
             newInput.setAttribute("type", "checkbox");
-            newInput.setAttribute("id","checkbox");
-            newInput.onclick = function(){checkboxfunction(this)};
+            newInput.classList.add("checkbox");
+            newInput.onchange = checkboxfunction;
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
             newButton.setAttribute("id", "RemoveButton");
@@ -52,23 +52,24 @@
 
         }
             
-    }   if(getUlist.childElementCount != 0){
-
+    }   
+        if(getUlist.childElementCount != 0){
         checkboxfunction();
     }
       function checkboxfunction(){
-        let getCheckbox = Array.from(document.querySelectorAll("#checkbox"));
+        let getCheckbox = Array.from(document.querySelectorAll(".checkbox"));
+        let href =  document.querySelector(".Completed").href = "#/Completed";
         for (const box of getCheckbox) {
-            if (box.checked)
-            {
-                document.querySelector("#li").className = "Completed";
-            }
-            else{
-                document.querySelector("#li").className = "";
-            }
-        }
-          //let hrefpung =  document.querySelector(".Completed").href = "#/Completed";
 
+            box.parentElement.classList.toggle("Completed", box.checked);
+        }
+        // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
+        // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
+
+}
+        function showCompleted(){
+            let getCompleted = document.querySelectorAll(".Completed");
+            
         }
 
      
