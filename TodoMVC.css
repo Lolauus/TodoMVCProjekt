@@ -9,7 +9,7 @@ ul li {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  padding: 12px 8px 12px 40px;
+padding: 9px 8px 12px 0px;
   background: white;
   list-style: none;
 }
@@ -21,7 +21,7 @@ ul li {
   height: 22px;
   width: 23px;
 }
-#todolist {
+#checkbox {
   position: absolute;
   left: 7px;
   height: 22px;
@@ -55,25 +55,27 @@ a {
 }
 .All {
   position: relative;
-  left: 0px;
-  padding: 3px;
-  margin: 5px;
+  left: 6px;
+  padding: 4px;
+  margin: 3px;
 }
 .Active {
   position: relative;
-  left: -25px;
-  padding: 3px;
-  margin: 5px;
+  left: 0px;
+  padding: 4px;
+  margin: 3px;
 }
 
 .Completed {
   position: relative;
-  right: 70px;
-  margin: 5px;
+  right: 4px;
+  margin: 0px;
   padding: 3px;
 }
 .Clear {
-  margin-left: 10px;
+  position: relative;
+  margin-left: -45px;
+  left: 84px;
 }
 #span {
   float: left;
@@ -83,6 +85,14 @@ a {
 }
 a:hover {
   border-color: rgba(175, 47, 47, 0.1);
+}
+
+a:active{
+
+
+  
+    color: black;
+  
 }
 /*360x640
 1366x768
