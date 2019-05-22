@@ -8,28 +8,31 @@
             
             let toDoInput = document.getElementById("Insertinfo"); 
             let newLi = document.createElement("li");
-            //newLi.setAttribute("id", "li");
             newLi.setAttribute("class","");
             let getUl = document.querySelector("#ullist");
+            //Create a new input
             let newInput = document.createElement("input");
             newInput.setAttribute("type","checkbox");
             newInput.classList.add("checkbox");
             newInput.onchange = checkboxfunction;
+
+            //Create new label and button
             let newLabel = document.createElement("label");
             let newButton = document.createElement("button");
             newButton.setAttribute("id","RemoveButton");
+
             let span = document.getElementById("span");
-            let imagedd = document.getElementById("labelchecked");
+            //let imagedd = document.getElementById("labelchecked");
+            //Create the checkbox-image for the
+            let imagelabel = document.createElement("label");
+            imagelabel.setAttribute("id","imagechecked");
+            let imagecheck = document.createElement('img');
+            imagecheck.setAttribute("id","checkedimage");
+            imagecheck.setAttribute("src", 'checked.jpg');
+            let imageuncheck = document.createElement("img");
+            imagecheck.setAttribute("src", 'unchecked.jpg');
 
-             let imagelabel = document.createElement("label");
-             imagelabel.setAttribute("id","imagechecked");
-             let imagecheck = document.createElement('img');
-              imagecheck.setAttribute("id","checkedimage");
-              imagecheck.setAttribute("src", 'checked.jpg');
-             let imageuncheck = document.createElement("img");
-             imagecheck.setAttribute("src", 'unchecked.jpg');
-
-             document.getElementById("labelchecked").onclick = function(){
+            document.getElementById("labelchecked").onclick = function(){
 
                  var checkbox = document.getElementById('labelchecked');
                  checkbox.checked = !checkbox.checked;
@@ -59,7 +62,7 @@
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
                 newLi.appendChild(imagelabel);
-                imagelabel.appendChild(imagedd);
+                //imagelabel.appendChild(imagedd);
                 span.textContent = getUl.childElementCount + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
