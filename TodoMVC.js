@@ -30,9 +30,10 @@
             let imagecheck = document.createElement('img');
             imagecheck.setAttribute("id","checkedimage");
             imagecheck.setAttribute("src", 'checked.png');
-            let imageuncheck = document.createElement("img");
-            imagecheck.setAttribute("src", 'unchecked.png');
             let section = document.querySelector("section");
+
+            let div = document.createElement("div");
+            div.setAttribute("id", "imagediv");
 
             // document.getElementById("labelchecked").onclick = function(){
 
@@ -40,11 +41,12 @@
             //      checkbox.checked = !checkbox.checked;
 
             //  }
-                imagelabel.onclick = event =>{
+                div.onclick = () =>{
 
+                        div.style.backgroundImage = "url('checked.png')";
                 }
             
-            newButton.onclick = () => {
+                newButton.onclick = () => {
 
                 newLi.remove("selected");
                 span.textContent = getUl.childElementCount + " " + "items left";
@@ -66,7 +68,7 @@
                 newLi.appendChild(newLabel);
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
-                imagelabel.appendChild(imagecheck);
+                newLi.appendChild(div);
                 span.textContent = getUl.childElementCount + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
