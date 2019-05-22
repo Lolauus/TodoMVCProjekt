@@ -33,7 +33,7 @@
             let section = document.querySelector("section");
 
             let div = document.createElement("div");
-            div.setAttribute("id", "imagediv");
+            div.setAttribute("class", "imagediv");
 
             // document.getElementById("labelchecked").onclick = function(){
 
@@ -41,9 +41,21 @@
             //      checkbox.checked = !checkbox.checked;
 
             //  }
+                
                 div.onclick = () =>{
 
                         div.style.backgroundImage = "url('checked.png')";
+                        newInput.onchange = checkboxfunction;
+                        let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
+                        let href =  document.querySelector(".Completed").href = "#/Completed"; 
+                        div.parentElement.classList.toggle("Completed", div.checked);
+                                  
+                }
+                div.onclick =() =>{
+
+                    if(div.style.backgroundImage = "url('checked.png')";)
+
+
                 }
             
                 newButton.onclick = () => {
@@ -63,7 +75,7 @@
             {
                 let footer = document.getElementById("footer");
                 footer.style.display = "block";
-                section.appendChild(newInput);
+                newLi.appendChild(newInput);
                 newLi.appendChild(imagelabel);
                 newLi.appendChild(newLabel);
                 newLi.appendChild(newButton);
@@ -91,11 +103,7 @@
         // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
         // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
 }
-        function showCompleted(){
-            let getCompleted = document.querySelectorAll(".Completed");
-            
         }
-    }
      
 
      

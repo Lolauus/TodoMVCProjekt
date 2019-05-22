@@ -3,7 +3,7 @@ body {
   background: #f5f5f5;
   font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-#imagediv{
+.imagediv{
 border-radius: 50%;
 border-radius: 50%;
 border: 1px solid black;
@@ -42,8 +42,6 @@ label{
 .checkbox {
   position: absolute;
   left: 7px;
-  height: 22px;
-  width: 23px;
   margin-top: -1px;
   color: #4d4d4d;
 }
