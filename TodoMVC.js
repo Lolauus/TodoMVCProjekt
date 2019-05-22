@@ -18,8 +18,9 @@
 
             //Create new label and button
             let newLabel = document.createElement("label");
-            let newButton = document.createElement("button");
+            let newButton = document.createElement("img");
             newButton.setAttribute("id","RemoveButton");
+            newButton.setAttribute("src", "Cross.png");
 
             let span = document.getElementById("span");
             //let imagedd = document.getElementById("labelchecked");
@@ -28,18 +29,21 @@
             imagelabel.setAttribute("id","imagechecked");
             let imagecheck = document.createElement('img');
             imagecheck.setAttribute("id","checkedimage");
-            imagecheck.setAttribute("src", 'checked.jpg');
+            imagecheck.setAttribute("src", 'checked.png');
             let imageuncheck = document.createElement("img");
-            imagecheck.setAttribute("src", 'unchecked.jpg');
+            imagecheck.setAttribute("src", 'unchecked.png');
+            let section = document.querySelector("section");
 
-            document.getElementById("labelchecked").onclick = function(){
+            // document.getElementById("labelchecked").onclick = function(){
 
-                 var checkbox = document.getElementById('labelchecked');
-                 checkbox.checked = !checkbox.checked;
+            //      var checkbox = document.getElementById('labelchecked');
+            //      checkbox.checked = !checkbox.checked;
 
-             }
+            //  }
+                imagelabel.onclick = event =>{
 
-
+                }
+            
             newButton.onclick = () => {
 
                 newLi.remove("selected");
@@ -57,12 +61,12 @@
             {
                 let footer = document.getElementById("footer");
                 footer.style.display = "block";
-                newLi.appendChild(newInput);
+                section.appendChild(newInput);
+                newLi.appendChild(imagelabel);
                 newLi.appendChild(newLabel);
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
-                newLi.appendChild(imagelabel);
-                //imagelabel.appendChild(imagedd);
+                imagelabel.appendChild(imagecheck);
                 span.textContent = getUl.childElementCount + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
