@@ -30,10 +30,11 @@
             let imagecheck = document.createElement('img');
             imagecheck.setAttribute("id","checkedimage");
             imagecheck.setAttribute("src", 'checked.png');
-            let section = document.querySelector("section");
-
             let div = document.createElement("div");
             div.setAttribute("class", "imagediv");
+            
+            let counter = document.getElementsByClassName("Completed");
+
 
             // document.getElementById("labelchecked").onclick = function(){
 
@@ -43,19 +44,21 @@
             //  }
                 
                 div.onclick = () =>{
-                    div.parentElement.classList.toggle("Completed");
+                       div.parentElement.classList.toggle("Completed");
                     if(div.parentElement.classList.contains ("Completed")){
 
                         newInput.checked = true;
+                        span.textContent = getUl.children.length-counter.length + " " + "items left";
                     }
                     else{
-                        newInput.checked = false;
-                        }
+                            
+                            span.textContent = getUl.children.length - counter.length + " " + "items left";
+                            newInput.checked = false;
+                    }
                     // let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
                     // let href =  document.querySelector(".CompletedList").href = "#/Completed"; 
                                   
                 }
-
                 // let completebutton = document.querySelector("CompletedList");
                 
                 // if(completebutton.onclick)
@@ -68,7 +71,7 @@
                 newButton.onclick = () => {
 
                 newLi.remove("selected");
-                span.textContent = getUl.childElementCount + " " + "items left";
+                span.textContent = getUl.children.length + " " + "items left";
 
                 if(getUl.textContent == "")
                 {
@@ -88,7 +91,7 @@
                 newLi.appendChild(newButton);
                 getUl.appendChild(newLi);
                 newLi.appendChild(div);
-                span.textContent = getUl.childElementCount + " " + "items left";
+                span.textContent = getUl.children.length + " " + "items left";
                 document.createElement("newLi");
                 document.getElementById('Insertinfo').value = '';
             }
