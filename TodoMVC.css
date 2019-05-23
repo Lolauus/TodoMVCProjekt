@@ -40,6 +40,7 @@ label{
   top: 13px;
 }
 .checkbox {
+  display:none;
   position: absolute;
   left: 7px;
   margin-top: -1px;
@@ -72,6 +73,10 @@ a {
 .Completed div{
   background-image: url("checked.png");
   background-repeat: no-repeat;
+}
+.Completed label{
+  color: #e6e6e6;
+  text-decoration: line-through;
 
 }
 .All {
@@ -109,11 +114,7 @@ a:hover {
 }
 
 a:active{
-
-
-  
     color: black;
-  
 }
 /*360x640
 1366x768

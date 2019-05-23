@@ -43,15 +43,28 @@
             //  }
                 
                 div.onclick = () =>{
+                    div.parentElement.classList.toggle("Completed");
+                    if(div.parentElement.classList.contains ("Completed")){
 
-                        //div.style.backgroundImage = "url('checked.png')";
-                        div.parentElement.classList.toggle("Completed");
-                        //let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
-                        //let href =  document.querySelector(".Completed").href = "#/Completed"; 
+                        newInput.checked = true;
+                    }
+                    else{
+                        newInput.checked = false;
+                        }
+                    // let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
+                    // let href =  document.querySelector(".CompletedList").href = "#/Completed"; 
                                   
                 }
 
-            
+                // let completebutton = document.querySelector("CompletedList");
+                
+                // if(completebutton.onclick)
+                //     if(div.parentElement.classList.contains ("Completed")){
+                //         newLi.style.display ("none");
+                        
+                //     }
+                // }
+
                 newButton.onclick = () => {
 
                 newLi.remove("selected");
@@ -89,7 +102,7 @@
     }
       function checkboxfunction(){
         let getCheckbox = Array.from(document.querySelectorAll(".checkbox"));
-        let href =  document.querySelector(".Completed").href = "#/Completed";
+        let href =  document.querySelector(".CompletedList").href = "#/Completed";
         for (const box of getCheckbox) {
 
             box.parentElement.classList.toggle("Completed", box.checked);
@@ -97,8 +110,13 @@
         // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
         // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
 }
-        }
-     
+    }
+        
+
+
+
+        
+
 
      
 
