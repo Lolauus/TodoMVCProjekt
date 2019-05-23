@@ -69,6 +69,11 @@ a {
   border: 1px solid transparent;
   border-radius: 3px;
 }
+.Completed div{
+  background-image: url("checked.png");
+  background-repeat: no-repeat;
+
+}
 .All {
   position: relative;
   left: 6px;
@@ -82,7 +87,7 @@ a {
   margin: 3px;
 }
 
-.Completed {
+.CompletedList {
   position: relative;
   right: 4px;
   margin: 0px;

@@ -44,19 +44,13 @@
                 
                 div.onclick = () =>{
 
-                        div.style.backgroundImage = "url('checked.png')";
-                        newInput.onchange = checkboxfunction;
-                        let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
-                        let href =  document.querySelector(".Completed").href = "#/Completed"; 
-                        div.parentElement.classList.toggle("Completed", div.checked);
+                        //div.style.backgroundImage = "url('checked.png')";
+                        div.parentElement.classList.toggle("Completed");
+                        //let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
+                        //let href =  document.querySelector(".Completed").href = "#/Completed"; 
                                   
                 }
-                div.onclick =() =>{
 
-                    if(div.style.backgroundImage = "url('checked.png')";)
-
-
-                }
             
                 newButton.onclick = () => {
 
