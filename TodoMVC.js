@@ -115,7 +115,8 @@
         // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
         // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
 }
-    }
+    }   
+    // function for Clear compelted button
           let clearCompleted = document.querySelector(".Clear")
 
             clearCompleted.onclick = () => {
@@ -126,6 +127,7 @@
             }
             
         }
+        // function for active button 
         let active = document.querySelector(".Active")
         active.onclick = () =>{
         let Completed = document.getElementsByClassName("Completed");
@@ -138,6 +140,7 @@
                 Completed[i].style.display = "none";
             }
         } 
+        // function for All button
            let Alltodos = document.querySelector(".All")
              Alltodos.onclick = () =>{
              
@@ -152,14 +155,14 @@
                     Completed[i].style.display = "block";
             }
         }
-
+         // function for Completed button  
         let Completed = document.querySelector(".Completedlist")
         Completed.onclick = () =>{
         let CompletedClass = document.getElementsByClassName("Completed");
         let active = document.querySelector(".Active")
             for(i=0; i < active.length; i++){
                 if(active.classList != "Completed")
-                
+
                 active[i].style.display = "none";
             }
             for(i=0; i < CompletedClass.length; i++){
