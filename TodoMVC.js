@@ -146,16 +146,17 @@
            let Alltodos = document.querySelector(".All")
              Alltodos.onclick = () =>{
              
-                let active = document.querySelector(".Active")
-                let Completed = document.querySelector(".Completed");
-                for(i=0; i < active.length; i++){
-
-                    active[i].style.display = "block";
-                }
-                for(i=0; i < Completed.length; i++){
-
-                    Completed[i].style.display = "block";
-            }
+                getUlist.childNodes.forEach(li => {
+                    if(!li.classList.contains("Completed")){
+                        li.style.display = "block";
+                    }
+                   else if(li.classList.contains("Completed")){
+    
+                    li.style.display = "block";
+    
+    
+                   }
+                });
         }
          // function for Completed button  
         let Completed = document.querySelector(".Completedlist")
