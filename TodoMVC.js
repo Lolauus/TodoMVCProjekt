@@ -130,15 +130,17 @@
         // function for active button 
         let active = document.querySelector(".Active")
         active.onclick = () =>{
-        let Completed = document.getElementsByClassName("Completed");
-            for(i=0; i < active.length; i++){
-
-                active[i].style.display = "block";
+             getUlist.childNodes.forEach(li => {
+            if(!li.classList.contains("Completed")){
+                li.style.display = "block";
             }
-            for(i=0; i < Completed.length; i++){
+            else if(li.classList.contains("Completed")){
 
-                Completed[i].style.display = "none";
+                li.style.display = "none";
             }
+            
+           
+        });
         } 
         // function for All button
            let Alltodos = document.querySelector(".All")
@@ -157,19 +159,20 @@
         }
          // function for Completed button  
         let Completed = document.querySelector(".Completedlist")
+        
         Completed.onclick = () =>{
-        let CompletedClass = document.getElementsByClassName("Completed");
-        let active = document.querySelector(".Active")
-            for(i=0; i < active.length; i++){
-                if(active.classList != "Completed")
+            getUlist.childNodes.forEach(li => {
+                if(!li.classList.contains("Completed")){
+                    li.style.display = "none";
+                }
+               else if(li.classList.contains("Completed")){
 
-                active[i].style.display = "none";
-            }
-            for(i=0; i < CompletedClass.length; i++){
+                li.style.display = "block";
 
-                CompletedClass[i].style.display = "block";
-            }
-        } 
+
+               }
+            });
+        }
 
 
 
