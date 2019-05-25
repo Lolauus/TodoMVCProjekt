@@ -13,6 +13,7 @@
             //Create a new input
             let newInput = document.createElement("input");
             newInput.setAttribute("type","checkbox");
+            newInput.setAttribute("id","check");
             newInput.classList.add("checkbox");
             newInput.onchange = checkboxfunction;
 
@@ -112,24 +113,59 @@
 
             box.parentElement.classList.toggle("Completed", box.checked);
         }
-        // i funktionen vill vi koppla klassen Completed till url #/Completed, alltså
-        // på knapptryck av Completed (möjligtvis en egen funktion?) så vill vi kalla på alla klasserna med namnet Completed(?)
+       
 }
     }   
-    // function for Clear compelted button
+    // function for Clear completed button
           let clearCompleted = document.querySelector(".Clear")
-
-            clearCompleted.onclick = () => {
-            let Completed = document.getElementsByClassName("Completed");
-        
+          let Completed = document.getElementsByClassName("Completed");;
+              clearCompleted.onclick = () => {
+               
             while (Completed.length > 0) {
-                Completed[length].remove();
-            }
+                    Completed[length].remove();
+                  }      
+                                  
+                }
+             if(getUlist.childElementCount == 0){
+        
+                 footer.style.display = "none";
+        
+               }
+                
+                       
+        
+        // function for show all button
+        let Alltodos = document.querySelector(".All")
+        Alltodos.onclick = () =>{
             
+         if(Alltodos = ("Selected")){
+           let Alltodos = document.querySelector(".All")
+            Alltodos.style.borderColor = "rgba(175, 47, 47, 0.1)";
+            document.querySelector(".Active").style.borderColor = "transparent";
+            document.querySelector(".Completedlist").style.borderColor = "transparent";
         }
+
+           getUlist.childNodes.forEach(li => {
+               if(!li.classList.contains("Completed")){
+                   li.style.display = "block";
+               }
+              else if(li.classList.contains("Completed")){
+
+               li.style.display = "block";
+
+
+              }
+           });
+   }
         // function for active button 
         let active = document.querySelector(".Active")
         active.onclick = () =>{
+            if(active = ("Selected")){
+                let active = document.querySelector(".Active")
+                 active.style.borderColor = "rgba(175, 47, 47, 0.1)";
+                 document.querySelector(".All").style.borderColor = "transparent";
+                 document.querySelector(".Completedlist").style.borderColor = "transparent";
+             }
              getUlist.childNodes.forEach(li => {
             if(!li.classList.contains("Completed")){
                 li.style.display = "block";
@@ -142,26 +178,18 @@
            
         });
         } 
-        // function for All button
-           let Alltodos = document.querySelector(".All")
-             Alltodos.onclick = () =>{
-             
-                getUlist.childNodes.forEach(li => {
-                    if(!li.classList.contains("Completed")){
-                        li.style.display = "block";
-                    }
-                   else if(li.classList.contains("Completed")){
     
-                    li.style.display = "block";
-    
-    
-                   }
-                });
-        }
          // function for Completed button  
-        let Completed = document.querySelector(".Completedlist")
-        
-        Completed.onclick = () =>{
+        let Completedlist = document.querySelector(".Completedlist")
+        Completedlist.onclick = () =>{
+
+            if(Completed = ("Selected")){
+                let Completedlist = document.querySelector(".Completedlist")
+                Completedlist.style.borderColor = "rgba(175, 47, 47, 0.1)";
+                 document.querySelector(".Active").style.borderColor = "transparent";
+                 document.querySelector(".All").style.borderColor = "transparent";
+             }
+
             getUlist.childNodes.forEach(li => {
                 if(!li.classList.contains("Completed")){
                     li.style.display = "none";
@@ -170,10 +198,37 @@
 
                 li.style.display = "block";
 
-
+               
                }
             });
+      
+ }
+ //Markera/Avmarkera alla
+ uncheckcheck.onclick = () =>{
+    let getCheckbox = Array.from(document.querySelectorAll(".checkbox"));
+    if(getCheckbox.some(x=> x.checked)){
+
+        for(i =0; i <getCheckbox.length; i++){
+
+            getCheckbox[i].checked = false
+            getCheckbox[i].closest("li").classList.remove("Completed");
+            
         }
+    }
+    else{
+        for(i =0; i <getCheckbox.length; i++){
+
+            getCheckbox[i].checked = true
+            getCheckbox[i].closest("li").classList.add("Completed");
+
+            
+        }
+        
+    }
+}
+   
+
+    
 
 
 
