@@ -1,5 +1,6 @@
 
     let getUlist = document.querySelector("#ullist");
+    let counter = document.getElementsByClassName("Completed");
     addTodo();
     function addTodo(){
         const form = document.querySelector("form");
@@ -16,16 +17,11 @@
             newInput.setAttribute("id","check");
             newInput.classList.add("checkbox");
             newInput.onchange = checkboxfunction;
-
-            //Create new label and button
             let newLabel = document.createElement("label");
             let newButton = document.createElement("img");
             newButton.setAttribute("id","RemoveButton");
             newButton.setAttribute("src", "Cross.png");
-
             let span = document.getElementById("span");
-            //let imagedd = document.getElementById("labelchecked");
-            //Create the checkbox-image for the
             let imagelabel = document.createElement("label");
             imagelabel.setAttribute("id","imagechecked");
             let imagecheck = document.createElement('img');
@@ -34,15 +30,7 @@
             let div = document.createElement("div");
             div.setAttribute("class", "imagediv");
             
-            let counter = document.getElementsByClassName("Completed");
 
-
-            // document.getElementById("labelchecked").onclick = function(){
-
-            //      var checkbox = document.getElementById('labelchecked');
-            //      checkbox.checked = !checkbox.checked;
-
-            //  }
                 
                 div.onclick = () =>{
                        div.parentElement.classList.toggle("Completed");
@@ -56,19 +44,8 @@
                             span.textContent = getUl.children.length - counter.length + " " + "items left";
                             newInput.checked = false;
                     }
-                    // let getCheckbox = Array.from(document.querySelectorAll(".imagediv"));
-                    // let href =  document.querySelector(".CompletedList").href = "#/Completed"; 
                                   
                 }
-                // let completebutton = document.querySelector("CompletedList");
-                
-                // if(completebutton.onclick)
-                //     if(div.parentElement.classList.contains ("Completed")){
-                //         newLi.style.display ("none");
-                        
-                //     }
-                // }
-
                 newButton.onclick = () => {
 
                 newLi.remove("selected");
@@ -99,9 +76,7 @@
          
             else{
                 return false;
-            }   
-
-           
+            }          
     }   
         if(getUlist.childElementCount != 0){
         checkboxfunction();
@@ -214,16 +189,15 @@
             getCheckbox[i].closest("li").classList.remove("Completed");
             
         }
+        span.textContent = getUlist.children.length + counter.length + " " + "items left";
     }
     else{
         for(i =0; i <getCheckbox.length; i++){
 
             getCheckbox[i].checked = true
             getCheckbox[i].closest("li").classList.add("Completed");
-
-            
         }
-        
+        span.textContent = getUlist.children.length - counter.length + " " + "items left";
     }
 }
    
