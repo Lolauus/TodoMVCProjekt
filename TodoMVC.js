@@ -18,9 +18,9 @@
             newInput.classList.add("checkbox");
             newInput.onchange = checkboxfunction;
             let newLabel = document.createElement("label");
-            let newButton = document.createElement("img");
-            newButton.setAttribute("id","RemoveButton");
-            newButton.setAttribute("src", "Cross.png");
+            let RemoveButton = document.createElement("img");
+            RemoveButton.setAttribute("id","RemoveButton");
+            RemoveButton.setAttribute("src", "Cross.png");
             let span = document.getElementById("span");
             let imagelabel = document.createElement("label");
             imagelabel.setAttribute("id","imagechecked");
@@ -46,7 +46,7 @@
                     }
                                   
                 }
-                newButton.onclick = () => {
+                RemoveButton.onclick = () => {
 
                 newLi.remove("selected");
                 span.textContent = getUl.children.length + " " + "items left";
@@ -66,7 +66,7 @@
                 newLi.appendChild(newInput);
                 newLi.appendChild(imagelabel);
                 newLi.appendChild(newLabel);
-                newLi.appendChild(newButton);
+                newLi.appendChild(RemoveButton);
                 getUl.appendChild(newLi);
                 newLi.appendChild(div);
                 span.textContent = getUl.children.length + " " + "items left";
@@ -98,16 +98,13 @@
                
             while (Completed.length > 0) {
                     Completed[length].remove();
-                  }      
-                                  
-                }
-             if(getUlist.childElementCount == 0){
+                  }            
+           if(getUlist.textContent == ""){
         
-                 footer.style.display = "none";
-        
-               }
-                
-                       
+             footer.style.display = "none";
+           
+          }
+    }                   
         
         // function for show all button
         let Alltodos = document.querySelector(".All")
