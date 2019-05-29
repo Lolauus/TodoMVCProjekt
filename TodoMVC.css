@@ -35,7 +35,9 @@ ul li {
   border-bottom: 1px solid #ededed;
 }
 label{
-  font-size: 24px
+  font-size: 24px;
+  margin-left: 20px;
+  word-break: break-all;
 }
 #checkedimage{
   background-size: contain;

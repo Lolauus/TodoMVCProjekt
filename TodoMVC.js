@@ -83,7 +83,6 @@
     }
       function checkboxfunction(){
         let getCheckbox = Array.from(document.querySelectorAll(".checkbox"));
-        let href =  document.querySelector(".CompletedList").href = "#/Completed";
         for (const box of getCheckbox) {
 
             box.parentElement.classList.toggle("Completed", box.checked);
