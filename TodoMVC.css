@@ -5,16 +5,49 @@ body {
   display: flex;
     flex-direction: column;
 }
-.imagediv{
-  border-radius: 50%;
-  border: 1px solid #e2dfdf;
-  width: 30px;
-  height: 30px;
-  margin-left: 2px;
-  margin-top: -30px;
-  background-repeat: no-repeat;
-  background-size: contain;
+label{
+  font-size: 24px;
+  left: 49px;
+  position: relative;
+  word-break: break-all;
 }
+footer {
+  background: white;
+  display: block;
+  width: 594px;
+  position: relative;
+  left: -22px;
+  margin-top: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #777;
+  display: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+a {
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+h1 {
+  font-weight: 100;
+  font-size: 100px;
+  flex: 1;
+  margin-top: 0px;
+  color: rgba(175, 47, 47, 0.15);
+  margin-bottom: -6px;
+}
+div {
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin-top: 40px;
+}
+
 #uncheckcheck{
 
   right: 600px;
@@ -33,12 +66,7 @@ body {
   list-style: none;
   border-bottom: 1px solid #ededed;
 }
-label{
-  font-size: 24px;
-  left: 49px;
-  position: relative;
-  word-break: break-all;
-}
+
 #checkedimage{
   background-size: contain;
 }
@@ -48,27 +76,6 @@ label{
   color: #cc9a9a;
   margin-top: -1px;
   top: 13px;
-}
-.checkbox {
-  display:none;
-  position: absolute;
-  left: 7px;
-  margin-top: -1px;
-  color: #4d4d4d;
-}
-footer {
-  background: white;
-  display: block;
-  width: 594px;
-  position: relative;
-  left: -22px;
-  margin-top: -15px;
-  margin-left: auto;
-  margin-right: auto;
-
-  color: #777;
-  display: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
 #ullist {
   position: relative;
@@ -88,14 +95,18 @@ footer {
   left: -85px;
   position: relative;
 }
-a {
-  color: inherit;
-  margin: 3px;
-  padding: 3px 7px;
-  text-decoration: none;
-  border: 1px solid transparent;
-  border-radius: 3px;
+#Insertinfo {
+  flex: 1;
+  font-size: 24px;
+  padding: 18px 263px 18px 40px;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -83px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  border: none;
 }
+
 .Completed div{
   background-image: url("checked.png");
   background-repeat: no-repeat;
@@ -105,6 +116,24 @@ a {
   text-decoration: line-through;
 
 }
+.imagediv{
+  border-radius: 50%;
+  border: 1px solid #e2dfdf;
+  width: 30px;
+  height: 30px;
+  margin-left: 2px;
+  margin-top: -30px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.checkbox {
+  display:none;
+  position: absolute;
+  left: 7px;
+  margin-top: -1px;
+  color: #4d4d4d;
+}
+
 .All {
   position: relative;
   left: 53px;
@@ -136,38 +165,12 @@ a:hover {
 }
 
 a:active{
-    color: black;
+ color: black;
 }
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
-  h1 {
-    font-weight: 100;
-    font-size: 100px;
-    flex: 1;
-    margin-top: 0px;
-    color: rgba(175, 47, 47, 0.15);
-    margin-bottom: -6px;
-  }
-  #Insertinfo {
-    flex: 1;
-    font-size: 24px;
-    padding: 18px 262px 18px 40px;
-    text-align: left;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -83px;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
-    border: none;
-  }
-  div {
-    color: #bfbfbf;
-    font-size: 10px;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-    text-align: center;
-    margin-top: 40px;
-  }
+ .header {
+ display: flex;
+ flex-direction: column;
+ }
 
     @media only screen and (max-width: 365px) {
     .header {
@@ -182,6 +185,16 @@ a:active{
       margin-left: auto;
       margin-right: auto;
     }
+    footer{
+      width: 594px;
+      position: relative;
+      left: -13px;
+      width: 272px;
+      margin-top: -15px;
+    }
+    div {
+      font-size: x-small;
+    }
     #Insertinfo {
       flex: 1;
       font-size: 15px;
@@ -190,10 +203,8 @@ a:active{
       position: relative;
       left: 10px;
     }
-    div {
-      font-size: x-small;
-    }
     #ullist{
+
       position: relative;
       margin-top: -2px;
       width: 272px;
@@ -201,22 +212,15 @@ a:active{
       margin-top: 0px;
       left: -33px;
     }
-    footer{
-      width: 594px;
-      left: -13px;
-      width: 272px;
-      margin-top: -15px;
-    }
     #uncheckcheck{
       padding: 6px 8px 16px 5px;
       position: relative;
       top: 30px;
       left: -269px;
   }
-    #Removebutton{
-      right: 18px;
+    #RemoveButton{
+      right: 20px;
     }
-
     #span{
       left: -77px;
       position: relative;
@@ -239,8 +243,6 @@ a:active{
       margin-left: -167px;
       bottom: -8px;
     }
-    #Removebutton{
-      right: 5px;
-    }
+
   }
   
