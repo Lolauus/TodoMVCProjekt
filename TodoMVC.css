@@ -7,7 +7,7 @@ body {
 }
 label{
   font-size: 24px;
-  left: 49px;
+  left: -170px;
   position: relative;
   word-break: break-all;
 }
@@ -167,82 +167,55 @@ a:hover {
 a:active{
  color: black;
 }
- .header {
+.header {
  display: flex;
  flex-direction: column;
  }
 
-    @media only screen and (max-width: 365px) {
-    .header {
-      display: flex;
-      flex-direction: column;
-    }
-    h1 {
-      font-weight: 100;
-      font-size: 60px;
-    }
+  @media only screen and (max-width: 665px) {
     body{
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0;
     }
-    footer{
-      width: 594px;
-      position: relative;
-      left: -13px;
-      width: 272px;
-      margin-top: -15px;
-    }
-    div {
-      font-size: x-small;
-    }
-    #Insertinfo {
-      flex: 1;
-      font-size: 15px;
-      padding: 18px 40px 18px 40px;
-      margin-top: -83px;
-      position: relative;
-      left: 10px;
-    }
-    #ullist{
 
-      position: relative;
-      margin-top: -2px;
-      width: 272px;
-      margin-bottom: 15px;
+    #Insertinfo{
+
+      width: 100%;
+      left: 0%;
       margin-top: 0px;
-      left: -33px;
-    }
-    #uncheckcheck{
-      padding: 6px 8px 16px 5px;
-      position: relative;
-      top: 30px;
-      left: -269px;
+      padding: 18px 0px 18px 35px;
   }
-    #RemoveButton{
-      right: 20px;
-    }
-    #span{
-      left: -77px;
-      position: relative;
-    }
-    .All{
-      left: -55px;
-      position: relative;
-    }
-    .Active{
-      left: 88px;
-      top: -16px;
-    }
-    .Completedlist{
-      left: 41px;
-      top: -16px;
-      position: relative;
-    }
-    .Clear{
-      left: -27px;
-      margin-left: -167px;
-      bottom: -8px;
-    }
+  #ullist{
+    width: 100%;
+    padding: 0;
+    left: 0;
+    bottom: 55px;
+    margin: 0;
+    
+  }
+  #uncheckcheck{
 
+    width: 3%;
+    left: -47.5%;
+    padding: 6px 8px 16px 6px;
+    top: -50px;
   }
+  #RemoveButton{
+
+    right: 5%;
+  }
+  .imagediv{
+
+  
+  }
+  footer{
+    top: -40px;
+    width: 100%;
+    left: 0%;
+  }
+  label{
+    left: -33%;
+  }
+}
+
+
   

@@ -109,12 +109,12 @@
         let Alltodos = document.querySelector(".All")
         Alltodos.onclick = () =>{
             
-         if(Alltodos = ("Selected")){
+
            let Alltodos = document.querySelector(".All")
             Alltodos.style.borderColor = "rgba(175, 47, 47, 0.1)";
             document.querySelector(".Active").style.borderColor = "transparent";
             document.querySelector(".Completedlist").style.borderColor = "transparent";
-        }
+        
 
            getUlist.childNodes.forEach(li => {
                if(!li.classList.contains("Completed")){
@@ -131,12 +131,11 @@
         // function for active button 
         let active = document.querySelector(".Active")
         active.onclick = () =>{
-            if(active = ("Selected")){
                 let active = document.querySelector(".Active")
                  active.style.borderColor = "rgba(175, 47, 47, 0.1)";
                  document.querySelector(".All").style.borderColor = "transparent";
                  document.querySelector(".Completedlist").style.borderColor = "transparent";
-             }
+             
              getUlist.childNodes.forEach(li => {
             if(!li.classList.contains("Completed")){
                 li.style.display = "block";
@@ -154,12 +153,11 @@
         let Completedlist = document.querySelector(".Completedlist")
         Completedlist.onclick = () =>{
 
-            if(Completed = ("Selected")){
                 let Completedlist = document.querySelector(".Completedlist")
                 Completedlist.style.borderColor = "rgba(175, 47, 47, 0.1)";
                  document.querySelector(".Active").style.borderColor = "transparent";
                  document.querySelector(".All").style.borderColor = "transparent";
-             }
+             
 
             getUlist.childNodes.forEach(li => {
                 if(!li.classList.contains("Completed")){
