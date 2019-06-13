@@ -239,8 +239,7 @@ a:active{
     padding: 0;
   }
   #span{
-    left: 0;
-    text-indent: -360px;
+    left: -20px;
   }
   .Active {
     position: inherit;
@@ -262,9 +261,9 @@ a:active{
     margin: 0;
   }
   .Clear{
-    left: 0px;
-    margin-left: 0px;
-    position: inherit;
+    left: 10px;
+    margin-left: 0;
+    position: relative;
   }
   .options{
     display: inline-flex;
@@ -294,5 +293,9 @@ a:active{
     }
     #uncheckcheck{
       width: 5%
+    }
+    #span{
+      position: inherit;
+     left: 0px;
     }
   }
