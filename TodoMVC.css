@@ -180,17 +180,17 @@ a:active{
       margin-top: 0px;
       padding: 18px 0px 18px 0px;
       text-indent: 30px;
-      width: 60vw;
+      width: 100vw;
       text-align: left;
   }
   #ullist{
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 100vw;
     padding: 0;;
     bottom: 0px;
     margin: 0;
-    top: -41px;
+    top: -52px;
     margin-left: auto;
     margin-right: auto;
     left: 0;    
@@ -207,17 +207,14 @@ a:active{
     right: 5%;
   }
   footer{
-    width: 60vw;
+    width: 100vw;
     left: -19px;
     margin-left: auto;
     margin-right: auto;
-    display: no ne;
     flex-direction: row;
-    top: -27px;
+    top: -37px;
     left: 0;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2);
 }
-  
   label{
     left: -25%;
   }
@@ -231,7 +228,7 @@ a:active{
     
     display: flex;
     flex-direction: column;
-    width: 60vw;
+    width: 100vw;
     margin-left: auto;
     margin-right: auto;
 
@@ -243,7 +240,7 @@ a:active{
   }
   #span{
     left: 0;
-    text-indent: -55px;
+    text-indent: -360px;
   }
   .Active {
     position: inherit;
@@ -273,4 +270,29 @@ a:active{
     display: inline-flex;
     align-items: center;
   }
+  }
+  @media only screen and (max-width: 360px){
+    h1{
+      font-size: 50px;
+    }
+    #ullist{
+      font-size: 18px;
+      text-indent: -60px;
+      top: -52px;
+    }
+    label{
+      left: -10%;
+      font-size: 20px;
+    }
+    footer{
+      font-size: 10px;
+      top: -41px;
+    }
+    #Insertinfo{
+      font-size: 18px;
+      font-size: 16px;
+    }
+    #uncheckcheck{
+      width: 5%
+    }
   }
